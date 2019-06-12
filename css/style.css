@@ -29,7 +29,7 @@
 
 *, *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, blockquote, th, td { margin: 0; padding: 0; font-size: 13px; direction: ltr; }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, blockquote, th, td { margin: 0; padding: 0; font-size: 1em; direction: ltr; }
 
 body {
 margin:0;
@@ -215,14 +215,14 @@ font-family: 'Bree Serif', serif;
 }
 
 #main_content h2 {
-margin-bottom:10px;	
+  margin-bottom: 30px;	
 }
 
 #main_content h3 {
 font-family: 'Open Sans', sans-serif, Arial, Helvetica;
-font-size:1.2em;
+font-size:1.4em;
 font-weight:normal;
-color:#999;
+color:#888;
 }
 
 h4, h5, h6 { 
@@ -341,7 +341,7 @@ font-size:1.6em;
 
 .one_half, .one_third, .two_thirds, .three_fourths, .one_fourth {
     float: left;
-    margin: 0 20px 20px 0;
+    margin: 0 20px 0 0;
     position: relative;
 }
 
@@ -380,7 +380,7 @@ overflow:hidden;
 /* 5.2 Banner */
 
 #banner {
-background:url(../images/backgrounds/bg_banner_2.jpg) no-repeat center top #999;
+background:url(../images/backgrounds/bg_banner_10.jpg) no-repeat center top #999;
 background-attachment:fixed;
 background-size:cover;
 -moz-background-size:cover;
@@ -458,6 +458,7 @@ vertical-align: baseline;
 background-image: none;
 background-position: 0 0;
 background-repeat: repeat;
+clear: both;
 }
 
 /* 6.3 Testimonials */
