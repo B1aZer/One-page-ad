@@ -27,6 +27,17 @@
 /* 1. Defaults & Reset of specific styles across browsers */
 /*------------------------------------------------------------------------------------------*/
 
+@font-face {
+  font-family: 'chomskyregular';
+	src: url('../fonts/Chomsky.eot');
+	src: local('☺'), url('../fonts/Chomsky.woff') format('woff'), url('../fonts/Chomsky.ttf') format('truetype'), url('../fonts/Chomsky.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+  font-weight: normal;
+  font-style: normal;
+}
+
 *, *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, blockquote, th, td { margin: 0; padding: 0; font-size: 1em; direction: ltr; }
@@ -66,6 +77,43 @@ border:none;
 /*------------------------------------------------------------------------------------------*/
 /* 2. Global elements */
 /*------------------------------------------------------------------------------------------*/
+
+.underline {
+  text-decoration: underline;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.gray {
+  color: #888;
+}
+
+#main_content .new-york {
+  font-family: arial;
+  color: #000;
+}
+
+#main_content .new-york h3 {
+  font-family: 'chomskyregular';
+}
+
+.rounded-left {
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  box-shadow:-2px 2px 10px #ddd;
+}
+
+.rounded-right {
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  box-shadow:2px 2px 10px #ddd;
+}
+
+.purple {
+ color: purple!important;
+}
 
 .background_grey {
 background:#f1f1f1;
@@ -222,7 +270,6 @@ font-family: 'Bree Serif', serif;
 font-family: 'Open Sans', sans-serif, Arial, Helvetica;
 font-size:1.4em;
 font-weight:normal;
-color:#888;
 }
 
 h4, h5, h6 { 
@@ -278,7 +325,7 @@ font-weight:300;
 font-size:1.2em;
 font-style:italic;
 display:inline;
-margin:0 10px 0 0;	
+margin:10px 10px 0 0;	
 }
 
 #banner .one_half h1 {
@@ -373,14 +420,25 @@ font-size:1.6em;
 /* 5.1 Header */
 
 #header_region {
-padding:0 0 10px 0;
-overflow:hidden;	
+  padding:10px 0 10px 0;
+  overflow:hidden;	
+}
+
+#header_region a {
+ color: white;
+ opacity: 0.5;
+ transition: all 0.3s ease-out;
+}
+
+#header_region a:hover {
+    opacity: 0.9;
+    filter: alpha(opacity = 90);
 }
 
 /* 5.2 Banner */
 
 #banner {
-background:url(../images/backgrounds/bg_banner_10.jpg) no-repeat center top #999;
+background:url(../images/backgrounds/bg_banner_2.jpg) no-repeat center top #999;
 background-attachment:fixed;
 background-size:cover;
 -moz-background-size:cover;
@@ -470,7 +528,7 @@ padding: 9px 0 0 0;
 
 blockquote img {
 background:#fff;
-margin:-25px 35px 0 15px;
+margin:-25px 35px 35px 15px;
 padding:3px;
 float:left;
 box-shadow:0 1px 3px #d3d3d3;
@@ -632,7 +690,6 @@ text-align:center;
 background:#fff;
 box-shadow:0 1px 3px #d3d3d3;
 text-align:center;
-border: 1px solid #eee;
 -webkit-transition: all 0.3s ease-out;
 -moz-transition: all 0.3s ease-out;
 -o-transition: all 0.3s ease-out;
@@ -734,8 +791,8 @@ height: 100%;
 /*------------------------------------------------------------------------------------------*/
 
 #social_elements ul {
-margin:10px 0 0 0;
-float:right;	
+  margin:0;
+  float:right;	
 }
 
 #social_elements li {
@@ -831,6 +888,10 @@ float:right;
 }
 
 .feedback {
+    background: url(../images/sprite_social_element.png) no-repeat -27px -450px;
+}
+
+.email {
     background: url(../images/sprite_social_element.png) no-repeat -27px -450px;
 }
 
@@ -1322,6 +1383,10 @@ display:block;
         width: 430px;
     }
 		
+    .one_third, .two_thirds {
+        width: 200px;
+    }
+		
 	
 /*Headings*/
 
@@ -1442,7 +1507,11 @@ display:block;
 
 
     .one_half, .one_third, .two_thirds, .one_fourth, .three_fourths, .one_half .one_fourth {
-        width: 285px;
+        width: 285px
+    }
+	
+    .one_third, .two_thirds {
+        width: 130px;
     }
 	
 /*Banner*/
@@ -1453,6 +1522,7 @@ padding-bottom:10px;
 	
 #logo h2 {
 display:block;
+  margin-top: 0;
 }	
 
 #banner .two_thirds, #shelf.one_half {
